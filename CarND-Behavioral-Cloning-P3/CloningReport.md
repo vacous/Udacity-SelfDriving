@@ -205,6 +205,7 @@ Recorded video(click the figure to view):
 [<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/start.PNG?raw=true">](https://www.youtube.com/watch?v=yEfMzFxeOZI)
 
 Video from driver view(click the figure to view)
+
 [<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/driverview_start.PNG?raw=true">](https://youtu.be/xE7YN1iiwI8)
 
 
