@@ -10,16 +10,16 @@ When the simulator is running, 3 images at center position, left position and ri
 
 Figure 1.1: center position captured image
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/3_position/center_2017_05_17_20_56_03_686.jpg?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/3_position/center_2017_05_17_20_56_03_686.jpg?raw=true" width="300">
 
 Figure 1.2: left position captured image
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/3_position/left_2017_05_17_20_56_03_686.jpg?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/3_position/left_2017_05_17_20_56_03_686.jpg?raw=true" width="300">
 
 
 Figure 1.3: right position captured image
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/3_position/right_2017_05_17_20_56_03_686.jpg?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/3_position/right_2017_05_17_20_56_03_686.jpg?raw=true" width="300">
 
 The controlling measurements are all recorded for the center position, therefore approximated adjustment of steering are made and used along with the images from the right and left position images. 
 <img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a50a30_carnd-using-multiple-cameras/carnd-using-multiple-cameras.png" width="500">
@@ -28,31 +28,31 @@ In the given track, there are majorly two road senerios, as shown in figure 2.1 
 
 Figure 2.1: road with yellow lines on both sides 
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/02.PNG?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/02.PNG?raw=true" width="300">
 
 Figure 2.1: road with slowing lines on both sides 
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/01.jpg?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/01.jpg?raw=true" width="300">
 
 Figure 2.3: one side has no line
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/06.PNG?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/06.PNG?raw=true" width="300">
 
 Figure 2.4: bridge
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/05.PNG?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/05.PNG?raw=true" width="300">
 
 Figure 2.5: different road side mark transition
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/04.PNG?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/04.PNG?raw=true" width="300">
 
 Figure 2.6: different road side mark transition
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/07.PNG?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/07.PNG?raw=true" width="300">
 
 Figure 2.7: different road side mark transition
 
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/08.PNG?raw=true" width="300">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/08.PNG?raw=true" width="300">
 
 The controlling measurements are all recorded for the center position, therefore approximated adjustment of steering are made and used along with the images from the right and left position images. 
 <img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a50a30_carnd-using-multiple-cameras/carnd-using-multiple-cameras.png" width="500">
@@ -153,7 +153,7 @@ print('finish combining data: ' + str(time.time() - ini_time))
 A Architecture, shown in figure 3, inspired by LeNet is used for the autonomous driving task.
 
 Figure 3: Neural Network Architecture
-<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/NNA.PNG?raw=true" width="800">
+<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/NNA.PNG?raw=true" width="800">
 
 
 ```python
@@ -194,7 +194,7 @@ plt.show()
 model.save('model.h5')
 ```
 
-![loss plot](https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/loss_plot.png?raw=true)
+![loss plot](https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/loss_plot.png?raw=true)
 As shwon, the loss on the validation set stays almost unchanged. Therefore, although the loss on the trainning data still has a decreasing trend, continuing with more trend will woresen overfitting issue. Each epoch has a sample size of over 50000 images, after the first epoch, futher trainning is not necessary. 
 
 ### Result
@@ -202,11 +202,11 @@ With the collected data and the neutal network architecture shown in figure 3, i
 
 Recorded video(click the figure to view):
 
-[<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/start.PNG?raw=true">](https://www.youtube.com/watch?v=yEfMzFxeOZI)
+[<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/start.PNG?raw=true">](https://www.youtube.com/watch?v=yEfMzFxeOZI)
 
 Video from driver view(click the figure to view)
 
-[<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/CarND-Behavioral-Cloning-P3/sample_pictures/driverview_start.PNG?raw=true">](https://youtu.be/xE7YN1iiwI8)
+[<img src="https://github.com/vacous/Udacity-SelfDriving/blob/master/Project03-BehaviorCloning/sample_pictures/driverview_start.PNG?raw=true">](https://youtu.be/xE7YN1iiwI8)
 
 
 ```python
