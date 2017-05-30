@@ -492,6 +492,7 @@ white_clip.write_videofile(white_output, audio=False)
     
 
 The result video is available in (click the image to view)
+
 [<img src = "https://github.com/vacous/Udacity-SelfDriving/blob/master/Project05-VehicleDetection/ReportImage/videoImg.PNG?raw=true" width = "400">](https://youtu.be/LrBTMhXXkfA)
 
 As shwon, the vehicle in the video are marked correctly. However, the tighness of the bound box is not very stable and rendering takes a significant amount of time. 
