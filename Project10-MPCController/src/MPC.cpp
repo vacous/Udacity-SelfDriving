@@ -6,8 +6,8 @@
 using CppAD::AD;
 
 // TODO: Set the timestep length and duration
-size_t N = 25;
-double dt = 0.20;
+size_t N = 20;
+double dt = 0.15;
 
 // This value assumes the model presented in the classroom is used.
 //
@@ -55,8 +55,8 @@ class FG_eval {
 
 	  // The part of the cost based on the reference state.
 	  for (int t = 0; t < N; t++) {
-		  fg[0] += 2500 * CppAD::pow(vars[cte_start + t], 2);
-		  fg[0] += 2500 * CppAD::pow(vars[epsi_start + t], 2);
+		  fg[0] += 2000 * CppAD::pow(vars[cte_start + t], 2);
+		  fg[0] += 8000 * CppAD::pow(vars[epsi_start + t], 2);
 		  fg[0] += CppAD::pow(vars[v_start + t] - ref_v, 2);
 	  }
 
@@ -106,14 +106,22 @@ class FG_eval {
 		  AD<double> v0 = vars[v_start + t - 1];
 		  AD<double> cte0 = vars[cte_start + t - 1];
 		  AD<double> epsi0 = vars[epsi_start + t - 1];
-
+		  AD<double> delta0;
+		  AD<double> a0;
+		  if (t > 1)
+		  {
+			  delta0 = vars[delta_start + t - 2];
+			  a0 = vars[a_start + t - 2];
+		  }
+		  else
+		  {
+			  delta0 = vars[delta_start + t - 1];
+			  a0 = vars[a_start + t - 1];
+		  }
 		  // Only consider the actuation at time t.
-		  AD<double> delta0 = vars[delta_start + t - 1];
-		  AD<double> a0 = vars[a_start + t - 1];
 
 		  AD<double> f0 = coeffs[0] + coeffs[1] * x0 + coeffs[2] * x0 * x0 + coeffs[3] * x0 * x0 * x0;
 		  AD<double> psides0 = CppAD::atan(3 * coeffs[3] * x0 * x0 + 2 * coeffs[2] * x0 + coeffs[1]);
-
 		  // Here's `x` to get you started.
 		  // The idea here is to constraint this value to be 0.
 		  //
